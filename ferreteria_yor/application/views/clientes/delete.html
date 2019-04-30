@@ -1,0 +1,38 @@
+$def with(clientes, message)
+<h3>
+    <a href="/clientes">clientes</a>
+</h3>
+$if message != None:
+    <div class="alert alert-warning">
+        <strong>Advertencia </strong> $message
+    </div>
+<br>
+
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id_cliente" id="id_cliente" value="$clientes.id_cliente" />
+
+    <div class="form-group">
+    <label for="nombre_c">Nombre</label>
+    <input readonly id="nombre_c" type="text" class="form-control" name="nombre_c" size="30" value="$clientes.nombre_c"/>
+</div><div class="form-group">
+    <label for="apepat_c">Apellido Paterno</label>
+    <input readonly id="apepat_c" type="text" class="form-control" name="apepat_c" size="30" value="$clientes.apepat_c"/>
+</div><div class="form-group">
+    <label for="apemat_c">Apellido Materno</label>
+    <input readonly id="apemat_c" type="text" class="form-control" name="apemat_c" size="30" value="$clientes.apemat_c"/>
+</div><div class="form-group">
+    <label for="telefono_c">Telefono</label>
+    <input readonly id="telefono_c" type="text" class="form-control" name="telefono_c" size="30" value="$clientes.telefono_c"/>
+</div><div class="form-group">
+    <label for="email">Email</label>
+    <input readonly id="email" type="text" class="form-control" name="email" size="30" value="$clientes.email"/>
+</div>
+
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+    </div>
+</form>
+<br>
+<br>
+<br>
